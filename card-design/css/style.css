@@ -1,0 +1,190 @@
+/* $color-box-1: #0f9bc0;
+$color-box-2: rgba(34, 65, 154, 0.8);
+$color-box-3: #57ccfd;
+$color-box-4: #e660e3;
+$color-box-5: #f07306;
+$color-box-6: #9b1308;
+$color-box-7: #de8b3e; */
+:root {
+  --surface-color: #fff;
+  --curve: 40;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+}
+.row {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+h1 {
+  margin: 80px auto 50px auto;
+  width: 50%;
+  text-align: center;
+}
+
+.clear-fix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.img-responsive {
+  max-width: 100%;
+  height: auto;
+}
+.section2 {
+  margin-top: 60px;
+}
+
+.card__collection {
+  position: relative;
+  display: block;
+  background: rgba(10, 10, 10, 0.5);
+  padding: 10px;
+  font-family: "Do Hyeon", sans-serif;
+  overflow: hidden;
+}
+.cards {
+  width: 300px;
+  height: 400px;
+  display: block;
+  float: left;
+  background-size: cover;
+  position: relative;
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 15px;
+  background-position: center;
+}
+/* =======================section2============================== */
+.cardss {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 4rem 5vw;
+  padding: 0;
+  list-style-type: none;
+}
+.card2 {
+  position: relative;
+  display: block;
+  height: 100%;
+  border-radius: calc(var(--curve) * 1px);
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.card__image {
+  width: 100%;
+  height: auto;
+}
+.card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  border-radius: calc(var(--curve) * 1px);
+  background-color: var(--surface-color);
+  transform: translateY(100%);
+  transition: 0.2s ease-in-out;
+}
+.card2:hover .card__overlay {
+  transform: translateY(0);
+}
+.card__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0;
+  padding: 2em;
+  border-radius: calc(var(--curve) * 1px) 0 0 0;
+  background-color: var(--surface-color);
+  transform: translateY(-100%);
+  transition: 0.2s ease-in-out;
+}
+.card__arc {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  z-index: 1;
+}
+.card__arc path {
+  fill: var(--surface-color);
+  d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+}
+.card2:hover .card__header {
+  transform: translateY(0);
+}
+.card__thumb {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.card__title {
+  font-size: 1em;
+  margin: 0 0 0.3em;
+  color: #6a515e;
+}
+.card__tagline {
+  display: block;
+  margin: 1em 0;
+  font-family: "MockFlowFont";
+  font-size: 0.8em;
+  color: #d7bdca;
+}
+.card__status {
+  font-size: 0.8em;
+  color: #d7bdca;
+}
+.card__header-text {
+  margin-left: 15px;
+}
+.card__description {
+  padding: 0 2em 2em;
+  margin: 0;
+  color: #1b1b5b;
+  font-family: "MockFlowFont";
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+.card__description li {
+  display: inline-block;
+  margin: 10px;
+}
+ion-icon {
+  font-size: 30px;
+}
+.fb {
+  color: #1872f2;
+}
+.tw {
+  color: #55acee;
+}
+.ig {
+  color: #bd081c;
+}
+.in {
+  color: #0a66c2;
+}
+footer {
+  padding: 20px;
+  background: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(25,25,101,1) 100%, rgba(0,212,255,1) 100%);
+  color: #fff;
+}
+footer p {
+  width: 25%;
+  margin: 0 auto;
+  text-align: center;
+}
